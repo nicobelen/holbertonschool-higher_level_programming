@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
-*
-*
-*
+* check_cycle - checks if there's a cycle in the list
+* @list: list
+* Return: a - 0 if there's not a cycle or 1 if there is
 *
 */
 int check_cycle(listint_t *list)
