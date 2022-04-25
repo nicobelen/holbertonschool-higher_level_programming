@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-"""
-    module
-"""
-#!/usr/bin/python3
 
 str = "Holberton School"
 
