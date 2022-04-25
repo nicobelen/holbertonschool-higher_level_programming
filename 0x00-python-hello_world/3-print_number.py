@@ -6,5 +6,5 @@
 
 number = 98
 
-print("{} Battery Street".format(98))
+print("{:d} Battery Street".format(98))
 
