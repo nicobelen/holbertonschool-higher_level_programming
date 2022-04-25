@@ -1,5 +1,2 @@
-#!/usr/bin/python3
-
-import py_compile
-
-py_compile.compile('main.py')
+#!/bin/bash
+python3 -OO -m py_compile main.py
