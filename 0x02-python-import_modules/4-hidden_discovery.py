@@ -4,15 +4,17 @@ def listToString(s):
 
     return (str1.join(s))
 
+
 if __name__ == "__main__":
     import hidden_4
 
 hid = dir(hidden_4)
 str1 = listToString(hid)
-str2 = str1.split("\'")
-for str2 in str1:
-    if str2[0:2] != "__":
-        print(str2, end="")
+str2 = str1.split(" ")
+
+for n in str2:
+    if n[0:2] != "__":
+        print(n)
 """
 if __name__ == "__main__":
     import hidden_4
