@@ -4,7 +4,6 @@ def multiple_returns(sentence):
     stringlen = len(sentence)
     if stringlen == 0:
         sentence[0] = None
-    else:
-        for i in sentence:
-            count += 1
+    for i in sentence:
+        count += 1
     return (count, sentence[0])
