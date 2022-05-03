@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
     count = 0
-    if sentence == "":
+    stringlen = len(sentence)
+    if stringlen == 0:
         sentence[0] = None
     else:
         for i in sentence:
