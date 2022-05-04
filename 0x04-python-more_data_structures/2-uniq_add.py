@@ -14,7 +14,7 @@ def get_unique_numbers(numbers):
 def uniq_add(my_list=[]):
     numbers = get_unique_numbers(my_list)
     res = 0
-    
+
     for n in numbers:
         res = res + n
     return res
