@@ -2,9 +2,9 @@
 import sys
 
 
-def safe_function(fct, args):
+def safe_function(fct, *args):
     try:
-        func = fct(args)
+        func = fct(*args)
         return func
     except Exception:
         print("Exception: {}".format(sys.exc_info()[1]), file=sys.stderr)
