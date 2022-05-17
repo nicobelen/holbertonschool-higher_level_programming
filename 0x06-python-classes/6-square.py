@@ -6,12 +6,12 @@ class Square:
     """Defines square"""
     def __init__(self, size=0, position=(0, 0)):
         """Initializes square instance"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """Returns size of square"""
-        return (self.__size * self.__size)
+        return (self.__size ** 2)
 
     @property
     def size(self):
@@ -51,6 +51,6 @@ class Square:
             position = self.position
             if position[1] > 0:
                 for i in range(position[1]):
-                    print("")
+                    print()
             for i in range(self.__size):
                 print(" " * position[0] + "#" * self.size)
