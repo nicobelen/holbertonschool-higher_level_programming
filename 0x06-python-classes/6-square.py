@@ -1,15 +1,21 @@
 #!/usr/bin/python3
+"""Creates class Square"""
+
+
 class Square:
+    """Initializes square instance"""
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
 
     @property
     def size(self):
+        """Retrieves size of square"""
         return self.__size
 
     @size.setter
     def size(self, value):
+        """Sets size of square"""
         if isinstance(value, int) is False:
             raise TypeError("size must be an integer")
         if value < 0:
@@ -18,10 +24,12 @@ class Square:
 
     @property
     def position(self):
+        """Retrieves square position"""
         return self.__position
 
     @position.setter
     def position(self, value):
+        """Sets square position"""
         self.__position = value
         if isinstance(value, tuple(int, int)) is False:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -29,9 +37,11 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
+        """Returns size of square"""
         return (self.__size * self.__size)
 
     def my_print(self):
+        """Prints square"""
         if self.__size == 0:
             print("")
         else:
