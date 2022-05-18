@@ -24,7 +24,7 @@ class Square:
     def area(self):
         """Returns are of square"""
         return (self.__size * self.__size)
-    
+
     def __eq__(self, other):
         return self.area == other.area
 
