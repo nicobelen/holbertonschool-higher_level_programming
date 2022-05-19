@@ -4,10 +4,10 @@
 
 class Rectangle:
     """Defines Rectangle"""
-    def init(self, width=0, height=0):
+    def __init__(self, width=0, height=0):
         """Initializes Rectangle instance"""
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
@@ -21,7 +21,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.__width = value
+        self.width = value
 
     @property
     def height(self):
@@ -35,15 +35,15 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value
+        self.height = value
 
     def area(self):
         """Returns area of rectangle"""
-        return (self.__width * self.__height)
+        return (self.width * self.height)
 
     def perimeter(self):
         """Returns perimeter of rectangle"""
-        if self.__height == 0 or self.__width == 0:
+        if self.height == 0 or self.width == 0:
             return 0
         else:
-            return ((self.__width * 2) + (self.__height * 2))
+            return ((self.width * 2) + (self.height * 2))
