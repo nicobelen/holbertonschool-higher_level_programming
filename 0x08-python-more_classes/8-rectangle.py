@@ -2,10 +2,6 @@
 """Creates class Rectangle"""
 
 
-from shutil import ReadError
-import stat
-
-
 class Rectangle:
     """Defines Rectangle"""
 
