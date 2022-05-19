@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Defines Rectangle"""
-    
+
     number_of_instances = 0
     print_symbol = "#"
 
@@ -58,19 +58,13 @@ class Rectangle:
         """Print the rectangle with the character #"""
         output = ""
         if self.__width == 0 or self.__height == 0:
-            return ""
-        if self.print_symbol != "#":
-            output += "{}".format(self.print_symbol * self.__width)
+            return output
         else:
-            output += "{}".format(Rectangle.print_symbol * self.__width)
-        for _ in range(self.__height):
-            output += "\n"
-            for _ in range(self.__width):
-                if self.print_symbol != "#":
-                    output += "{}".format(self.print_symbol)
-                else:
-                    output += "{}".format(Rectangle.print_symbol)
-        return output
+            for _ in range(self.__height):
+                for _ in range(self.__width):
+                    output += str(self.print_symbol)
+                output += "\n"
+        return output[:-1]
 
     def __repr__(self):
         """Returns string representation for rectangle"""
