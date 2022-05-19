@@ -12,7 +12,6 @@ class Rectangle:
         """Initializes Rectangle instance"""
         self.height = height
         self.width = width
-        self.print_symbol = "#"
         Rectangle.number_of_instances += 1
 
     @property
