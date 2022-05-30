@@ -1,13 +1,10 @@
 #!/usr/bin/python3
-# class AddAtribute:
-    
-#     def __init__(self, obj, name, value):
-#         self.obj = obj
-#         self.name = name
-#         self.value = value
+"""adds new obj to class"""
+
 
 def add_attribute(obj, name, value):
-    atribute = setattr(obj, name, value)
-    if not hasattr(atribute, name):
+    """add attribute if it's possible"""
+    if hasattr(obj, '__dict__'):
+        setattr(obj, name, value)
+    else:
         raise TypeError("can't add new attribute")
-    return atribute
