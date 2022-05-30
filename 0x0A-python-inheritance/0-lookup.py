@@ -3,4 +3,4 @@ from inspect import getmembers
 
 
 def lookup(obj):
-    print(dir(obj))
+    return list(dir(obj))
