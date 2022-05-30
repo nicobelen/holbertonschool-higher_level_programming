@@ -38,6 +38,6 @@ class Square(Rectangle):
 
     def __init__(self, size):
         """define init"""
-        super().__init__(size, size)
         super().integer_validator('size', size)
+        super().__init__(self.__size, self.__size)
         self.__size = size
