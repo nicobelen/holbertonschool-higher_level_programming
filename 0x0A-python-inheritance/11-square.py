@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 class BaseGeometry:
     """comment 1"""
-    pass
 
     def area(self):
         """BaseGeometry"""
@@ -13,6 +12,8 @@ class BaseGeometry:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
+        return value
+
 
 class Rectangle(BaseGeometry):
     """Rectangle"""
@@ -27,10 +28,11 @@ class Rectangle(BaseGeometry):
     def area(self):
         """Returns area of rectangle"""
         return (self.__width * self.__height)
-    
+
     def __str__(self):
         """Returns widht and height of Rectangle"""
         return f"[Rectangle] {self.__width}/{self.__height}"
+
 
 class Square(Rectangle):
     """Square"""
@@ -40,11 +42,11 @@ class Square(Rectangle):
         super().__init__(size, size)
         super().integer_validator('size', size)
         self.__size = size
-    
+
     def area(self):
         """Returns area"""
         return (self.__size ** 2)
-    
+
     def __str__(self):
         """Returns widht and height of Square"""
         return f"[Square] {self.__size}/{self.__size}"
