@@ -17,6 +17,7 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
 
+
 class Rectangle(BaseGeometry):
     """Rectangle"""
 
@@ -30,7 +31,7 @@ class Rectangle(BaseGeometry):
     def area(self):
         """Returns area of rectangle"""
         return (self.__width * self.__height)
-    
+
     def __str__(self):
         """return size of width and height"""
         return f"[Rectangle] {self.__width}/{self.__height}"
