@@ -3,7 +3,6 @@
     and then save them to a file"""
 
 
-import json
 from sys import argv
 
 
@@ -12,8 +11,6 @@ save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
 f = "add_item.json"
 
-"""Trys to save the list as a JSON representation in the file,
-    if the file doesn't exist it creates it"""
 try:
     load = load_from_json_file(f)
 except FileNotFoundError:
