@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""comment of the script"""
+"""comment of the script!"""
 
 
 from sys import argv
