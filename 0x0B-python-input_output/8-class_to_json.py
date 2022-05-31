@@ -5,4 +5,5 @@
 
 
 def class_to_json(obj):
+    """return dict version of an object"""
     return vars(obj)
