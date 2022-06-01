@@ -13,5 +13,5 @@ save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 try:
     elm = load_from_json_file('add_item.json')
     save_to_json_file(elm + argv[1:], 'add_item.json')
-except FileNotFoundError:
+except Exception:
     save_to_json_file(argv[1:], 'add_item.json')
