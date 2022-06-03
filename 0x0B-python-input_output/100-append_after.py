@@ -6,10 +6,8 @@
 def append_after(filename="", search_string="", new_string=""):
     with open(filename, 'r', encoding='utf-8') as f:
         newtext = []
-        while True:
-            line = f.readline()
-            if line == "":
-                break
+        lines = f.readlines()
+        for line in lines:
             newtext += line
             if search_string in line:
                 newtext += new_string
