@@ -79,8 +79,9 @@ class Rectangle(Base):
         s = " " * self.__x
         print(n, end="")
         for _ in range(self.__height):
+            print(f"{s}", end="")
             for _ in range(self.__width):
-                print(f"{s}#", end="")
+                print("#", end="")
             print()
 
     def __str__(self):
