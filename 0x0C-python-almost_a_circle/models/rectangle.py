@@ -93,15 +93,15 @@ class Rectangle(Base):
         count = 0
         if args is not None and len(args) != 0:
             for arg in args:
-                if count == 1:
+                if count == 0:
                     self.id = args[0]
-                if count == 2:
+                if count == 1:
                     self.__width = args[1]
-                if count == 3:
+                if count == 2:
                     self.__height = args[2]
-                if count == 4:
+                if count == 3:
                     self.__x = args[3]
-                if count == 5:
+                if count == 4:
                     self.__y = args[4]
                 count += 1
         else:
