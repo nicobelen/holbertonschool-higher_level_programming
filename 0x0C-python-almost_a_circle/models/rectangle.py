@@ -88,7 +88,7 @@ class Rectangle(Base):
     def __str__(self):
         """Returns data of the rectangle"""
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y}\
-- {self.__width}/{self.__height}")
+ - {self.__width}/{self.__height}")
 
     def update(self, *args, **kwargs):
         """Updates values of the rectangle"""
