@@ -27,13 +27,12 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        if list_objs is None or list_objs == []:
+            text = "[]"
+        else:
+            dictlist = []
+            for obj in list_objs:
+                dictlist.append(obj.to_dictionary())
+            text = cls.to_json_string(dictlist)
         with open("Rectangle.json", 'w') as f:
-            if list_objs is None or list_objs == []:
-                f.write("[]")
-            else:
-                dictlist = []
-                for obj in list_objs:
-                    dictlist.append(obj.to_dictionary())
-                text = cls.to_json_string(dictlist)
-                f.write(text)
-        return f
+            f.write(text)
