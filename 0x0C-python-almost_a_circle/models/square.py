@@ -32,17 +32,18 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """Updates values of the rectangle"""
+        newdict = {'id': 0, 'size': 0, 'x': 0, 'y': 0}
         count = 0
         if args is not None and len(args) != 0:
             for arg in args:
                 if count == 0:
-                    self.id = args[0]
+                    newdict[0] = setattr(self, "id", arg)
                 if count == 1:
-                    self.size = args[1]
+                    newdict[1] = setattr(self, "size", arg)
                 if count == 2:
-                    self.x = args[2]
+                    newdict[2] = setattr(self, "x", arg)
                 if count == 3:
-                    self.y = args[3]
+                    newdict[3] = setattr(self, "y", arg)
                 count += 1
         else:
             for key, value in kwargs.items():
