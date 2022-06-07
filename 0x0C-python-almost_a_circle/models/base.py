@@ -3,7 +3,6 @@
 
 
 import json
-from multiprocessing import dummy
 
 
 class Base:
@@ -66,3 +65,27 @@ class Base:
                 return newlist
         except FileNotFoundError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        from turtle import Turtle, Screen
+        screen = Screen()
+        T = Turtle()
+        list_rectangles.extend(list_squares)
+        for rectangle in list_rectangles:
+            T.penup()
+            T.goto(rectangle.x, rectangle.y)
+            T.pendown()
+            T.pencolor('red')
+            T.forward(rectangle.width)
+            T.left(90)
+            T.pencolor('yellow')
+            T.forward(rectangle.height)
+            T.left(90)
+            T.pencolor('green')
+            T.forward(rectangle.width)
+            T.left(90)
+            T.pencolor('brown')
+            T.forward(rectangle.height)
+        T.hideturtle()
+        screen.exitonclick
