@@ -37,3 +37,10 @@ class Base:
             text = cls.to_json_string(dictlist)
         with open(cls.__name__ + ".json", 'w') as f:
             f.write(text)
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None or json_string == []:
+            return "[]"
+        else:
+            return json.loads(json_string)
