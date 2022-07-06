@@ -2,6 +2,6 @@
 SELECT
     id, name
 FROM
-    states
+    cities
 WHERE
-    name = (SELECT id FROM cities WHERE name = 'California' ORDER BY cities.id ASC);
+    name = (SELECT id FROM states WHERE name = 'California');
