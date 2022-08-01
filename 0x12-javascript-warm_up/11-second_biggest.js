@@ -8,12 +8,12 @@ if (!arg || length < 2) {
   console.log(second);
 } else {
   while (i < length && arg[i + 1]) {
-    if (arg[i] > arg[i + 1]) {
+    if (parseInt(arg[i], 10) > parseInt(arg[i + 1], 10)) {
       if (result < arg[i]) {
         result = arg[i];
       }
     } else {
-      if (result < arg[i + 1]) {
+      if (result < parseInt(arg[i + 1], 10)) {
         result = arg[i + 1];
       }
     }
