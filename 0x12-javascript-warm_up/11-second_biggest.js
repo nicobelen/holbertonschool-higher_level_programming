@@ -26,5 +26,5 @@ if (!arg || length < 3) {
     }
     i++;
   }
-}
 console.log(second);
+}
