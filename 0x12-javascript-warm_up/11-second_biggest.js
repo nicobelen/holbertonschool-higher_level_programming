@@ -4,8 +4,8 @@ const length = process.argv.length;
 let i = 2;
 let result = 0;
 let second = 0;
-if (!arg || length < 3) {
-  console.log(0);
+if (!arg || length < 2) {
+  console.log(second);
 } else {
   while (i < length && arg[i + 1]) {
     if (arg[i] > arg[i + 1]) {
